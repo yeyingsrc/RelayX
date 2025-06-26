@@ -77,6 +77,8 @@ printerbug 和 PetitPotam。 触发可通过指定参数来实现，默认使用
 -m pki      # 向AD CS申请证书
 -m sdcd     # 通过ldap添加 msDS-KeyCredentialLink 属性进行攻击，需要 Server >= 2016
 ```
+> 这里通过SMB relay到LDAP需要存在CVE-2019-1040漏洞
+
 ### 一、攻击Exchange服务器
 默认Exchange的服务权限较高，所以工具会利用Exchange的权限将当前用户增加Dcsync权限。
 ```
